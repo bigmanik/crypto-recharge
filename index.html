@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Recharge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-xl shadow-xl w-full max-w-md">
+      <h1 class="text-2xl font-bold mb-4 text-center text-gray-600">Recharge with Crypto today</h1>
+
+      <form id="rechargeForm" class="space-y-4">
+        <input type="tel" id="phone" placeholder="Phone number" required class="w-full border p-2 rounded" />
+
+        <select id="network" required class="w-full border p-2 rounded">
+          <option value="">Select Network</option>
+          <option value="mtn">MTN</option>
+          <option value="airtel">Airtel</option>
+          <option value="glo">Glo</option>
+          <option value="9mobile">9mobile</option>
+        </select>
+
+        <select id="amount" required class="w-full border p-2 rounded">
+          <option value="">Select Amount</option>
+          <option value="100">₦100</option>
+          <option value="200">₦200</option>
+          <option value="500">₦500</option>
+          <option value="1000">₦1000</option>
+        </select>
+
+        <button type="submit" class="w-full bg-gray-600 text-white py-2 rounded hover:bg-green-700">
+          Get Payment Info
+        </button>
+      </form>
+
+      <div id="paymentInfo" class="mt-6 hidden">
+        <p>Send <span id="cryptoAmount" class="font-bold"></span> LTC to:</p>
+        <p id="walletAddress" class="font-mono text-sm text-blue-800 mt-2">LXoExampleWalletAddress</p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
